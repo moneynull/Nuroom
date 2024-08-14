@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+Remove Hotel,1,2916,2916,2916,0.00,0.000%,.34294,0.14,0.13,408.0
+10 Booking Requests,10,2026,2019,2041,6.26,0.000%,4.89956,1.93,3.13,404.0
+TOTAL,11,2107,2019,2916,255.70,0.000%,3.73134,1.47,2.30,404.4

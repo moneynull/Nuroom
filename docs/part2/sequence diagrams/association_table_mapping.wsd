@@ -1,0 +1,26 @@
+@startuml
+actor       Administrator           as Foo0
+participant Frontend                as Foo1
+control     groupControl            as Foo2
+entity      HotelierGroupMapper     as Foo4
+database    PostgreSQL              as Foo7
+entity      "a HotelierGroup"       as Foo10
+entity      "a Hotel"               as Foo8
+entity      "a Hotelier"            as Foo11
+
+Foo0 -> Foo1 : List Hoteliers Groups 
+Foo1 -> Foo2 : HTTP GET /ViewAllHotelierGroup
+Foo2 -> Foo4 : findAll(User)
+Foo4 -> Foo7 : "SELECT * from tb_hotelier_group"
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo10: new (HotelierGroups)
+Foo4 -> Foo7 : "SELECT * from tb_hotel WHERE ... JOIN ... "
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo8: new (Hotels)
+Foo4 -> Foo7 : "SELECT * from tb_user ... INNER JOIN tb_group (...)"
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo11: new (Hotelier)
+Foo2 <- Foo4: List of Hotelier Groups
+Foo1 <- Foo2 : HTTP RESPONSE [200]
+Foo0 <- Foo1 : View Hotelier Groups
+@enduml

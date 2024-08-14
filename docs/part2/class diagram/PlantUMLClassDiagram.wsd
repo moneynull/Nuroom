@@ -1,0 +1,96 @@
+@startuml NuRoom_Class_Diagram
+skinparam classAttributeIconSize 0
+
+abstract class User {
+    #id: Int
+    -firstName: String
+    -lastName: String
+    -email: String
+
+    +login(): void
+    +logout(): void
+    +listBookings(): List<Booking>
+}
+class Customer {
+    -dateOfBirth: Date
+    -phoneNumber: String
+    +signup(): void
+}
+
+class Admin {
+    -createHotelierAccount(): void
+}
+class Hotelier {
+    -phoneNumber: String
+    
+    +createHotel(): void
+    +updateHotel(): void
+    +deleteHotel(): void
+}
+class HotelierGroup {
+    #id: Int
+    -groupName: String
+    -hotelierId: int
+}
+
+class Address {
+    #id: Int
+    -street: String
+    -city: String
+    -postCode: Int
+    -state: String
+    -country: String
+}
+
+class Hotel{
+    #id: Int
+    -name: String
+    -address: String
+    -image: String
+}
+class Room {
+    #id: Int
+    -floor: int
+    -roomNum: int
+    -roomType: RoomType
+}
+
+class RoomType {
+    #id: Int
+    +numRooms: Int
+    +numBedrooms: Int
+    +numBeds: Int
+    +numBathroom: Int
+    +description: String
+    +price: BigDecimal
+    +image: String
+}
+
+class Booking {
+    #id: Int
+    -startDate: DateTime
+    -endDate: DateTime
+    -numGuest: int
+
+}
+class HotelAmenity {
+    #id: Int
+    +name: String
+    +description: String
+    +image: String
+}
+
+class RoomAmenity {
+    #id: Int
+    +name: String
+    +description: String
+}
+
+User <|-- Customer
+User <|-- Hotelier
+User <|-- Admin
+Hotel "1" *--> "1..*" RoomType: defines
+Hotel "1" *--> "1..*" Room: houses
+Room -- RoomType
+HotelierGroup "1" -- "1" Hotel: runs
+@enduml

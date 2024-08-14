@@ -1,0 +1,8 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+One booking to same hotel,1,1667,1667,1667,0.00,0.000%,.59988,0.24,0.38,404.0
+Multiple bookings to same hotel (no concurrency),10,1128,1078,1167,29.00,10.000%,8.55432,3.39,5.41,406.4
+Multiple bookings to same hotel (with concurrency) - 2 simulatenous users,2,1804,1793,1815,11.00,0.000%,1.10193,0.43,0.69,404.0
+Multiple bookings to same hotel (with concurrency) - 10 simulatenous users,10,1360,1324,1379,17.52,50.000%,7.24113,2.94,4.56,416.0
+Multiple bookings to same hotel (with concurrency) - 20 simulatenous users,20,1269,1251,1306,18.40,75.000%,15.30222,6.31,9.64,422.0
+Multiple bookings to same hotel (with concurrency) - 21 simulatenous users,21,2402,1707,4464,945.91,76.190%,4.70009,1.94,2.96,422.3
+TOTAL,64,1656,1078,4464,762.18,57.812%,3.98010,1.62,2.51,417.9

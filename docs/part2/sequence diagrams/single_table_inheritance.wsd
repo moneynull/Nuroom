@@ -1,0 +1,20 @@
+@startuml
+actor       Administrator       as Foo0
+participant Frontend            as Foo1
+control     AccountControl      as Foo2
+entity      accountService      as Foo3
+entity      userMapper          as Foo4
+database    PostgreSQL          as Foo5
+entity      "a User"            as Foo6
+Foo0 -> Foo1 : List Users 
+Foo1 -> Foo2 : HTTP GET /ViewAllUsers
+Foo2 -> Foo3 : viewAllUserList()
+Foo3 -> Foo4 : findAllUsers()
+Foo4 -> Foo5 : "SELECT * FROM tb_user"
+Foo4 <- Foo5 : Result set
+Foo4 -> Foo6 : new (users)
+Foo3 <- Foo4 : List of Users
+Foo2 <- Foo3 : List of Users
+Foo1 <- Foo2 : HTTP RESPONSE [200]
+Foo0 <- Foo1 : View Users
+@enduml

@@ -1,0 +1,51 @@
+id,tb_hotelier_group_id,name,image_url,is_active,country,state,street,postcode,streetNo
+1,5,"Cole, Roob and Carter Hotel Uganda",http://dummyimage.com/971x803.png/ff4444/ffffff,1,Uganda,,Delaware,,23
+2,8,Lang-Wolff Hotel Ecuador,http://dummyimage.com/1098x816.png/cc0000/ffffff,1,Ecuador,,Utah,,3787
+3,4,"Schowalter, Lueilwitz and Strosin Hotel Thailand",http://dummyimage.com/918x864.png/dddddd/000000,1,Thailand,,Spaight,57210,49185
+4,6,Kessler and Sons Hotel Nigeria,http://dummyimage.com/1086x884.png/5fa2dd/ffffff,1,Nigeria,,Melvin,,7000
+5,4,"Schowalter, Lueilwitz and Strosin Hotel Democratic Republic of the Congo",http://dummyimage.com/1370x853.png/dddddd/000000,1,Democratic Republic of the Congo,,Lakewood Gardens,,0
+6,6,Kessler and Sons Hotel Portugal,http://dummyimage.com/1393x850.png/dddddd/000000,1,Portugal,Vila Real,Leroy,5070-175,54190
+7,1,"Osinski, Willms and Roberts Hotel Malaysia",http://dummyimage.com/1094x687.png/5fa2dd/ffffff,1,Malaysia,Selangor,Green Ridge,40990,027
+8,8,Lang-Wolff Hotel Peru,,1,Peru,,Di Loreto,,319
+9,10,McLaughlin Group Hotel Lebanon,http://dummyimage.com/1388x730.png/5fa2dd/ffffff,1,Lebanon,,Crescent Oaks,,676
+10,7,"Weber, Moen and Nitzsche Hotel France",http://dummyimage.com/1126x712.png/dddddd/000000,1,France,Poitou-Charentes,Russell,16104 CEDEX,17591
+11,6,Kessler and Sons Hotel Mongolia,http://dummyimage.com/1262x885.png/5fa2dd/ffffff,1,Mongolia,,Laurel,,08
+12,5,"Cole, Roob and Carter Hotel Indonesia",http://dummyimage.com/1268x859.png/cc0000/ffffff,1,Indonesia,,Clemons,,27
+13,2,"Emard, Gleason and Shields Hotel Philippines",http://dummyimage.com/1049x754.png/dddddd/000000,1,Philippines,,Pierstorff,3403,01559
+14,4,"Schowalter, Lueilwitz and Strosin Hotel Nicaragua",http://dummyimage.com/888x769.png/5fa2dd/ffffff,1,Nicaragua,,Prentice,,028
+15,7,"Weber, Moen and Nitzsche Hotel Poland",,1,Poland,,Bluejay,76-020,57
+16,6,Kessler and Sons Hotel China,,1,China,,Merchant,,9
+17,10,McLaughlin Group Hotel Tunisia,http://dummyimage.com/812x678.png/ff4444/ffffff,1,Tunisia,,Riverside,,53041
+18,7,"Weber, Moen and Nitzsche Hotel Russia",http://dummyimage.com/940x837.png/5fa2dd/ffffff,1,Russia,,Larry,361023,70826
+19,10,McLaughlin Group Hotel Indonesia,http://dummyimage.com/902x744.png/cc0000/ffffff,1,Indonesia,,Rutledge,,1
+20,5,"Cole, Roob and Carter Hotel Indonesia",http://dummyimage.com/805x877.png/cc0000/ffffff,1,Indonesia,,Sachtjen,,1863
+21,2,"Emard, Gleason and Shields Hotel South Africa",http://dummyimage.com/1280x736.png/cc0000/ffffff,1,South Africa,,Sommers,8138,4216
+22,9,McCullough and Sons Hotel Russia,,1,Russia,,Anderson,644000,11783
+23,4,"Schowalter, Lueilwitz and Strosin Hotel United States",http://dummyimage.com/1303x885.png/dddddd/000000,1,United States,Indiana,Almo,46406,43
+24,2,"Emard, Gleason and Shields Hotel Ukraine",http://dummyimage.com/1176x893.png/dddddd/000000,1,Ukraine,,Badeau,,4
+25,2,"Emard, Gleason and Shields Hotel Belgium",http://dummyimage.com/956x623.png/cc0000/ffffff,1,Belgium,Wallonie,Blue Bill Park,7604,3171
+26,7,"Weber, Moen and Nitzsche Hotel Russia",http://dummyimage.com/914x743.png/dddddd/000000,1,Russia,,American Ash,141930,34181
+27,8,Lang-Wolff Hotel China,http://dummyimage.com/1305x784.png/dddddd/000000,1,China,,Corry,,851
+28,6,Kessler and Sons Hotel Philippines,http://dummyimage.com/840x784.png/dddddd/000000,1,Philippines,,Green,1682,671
+29,7,"Weber, Moen and Nitzsche Hotel Russia",http://dummyimage.com/964x777.png/dddddd/000000,1,Russia,,Holmberg,241551,6570
+30,8,Lang-Wolff Hotel Ukraine,http://dummyimage.com/1301x839.png/cc0000/ffffff,1,Ukraine,,Anhalt,,98174
+31,6,Kessler and Sons Hotel China,http://dummyimage.com/860x838.png/dddddd/000000,0,China,,Talisman,,8426
+32,7,"Weber, Moen and Nitzsche Hotel Indonesia",http://dummyimage.com/1284x811.png/cc0000/ffffff,1,Indonesia,,Morrow,,2
+33,1,"Osinski, Willms and Roberts Hotel Mexico",http://dummyimage.com/1201x717.png/dddddd/000000,1,Mexico,Tamaulipas,Mandrake,87078,5
+34,6,Kessler and Sons Hotel South Africa,http://dummyimage.com/875x900.png/dddddd/000000,1,South Africa,,Cascade,6150,41906
+35,10,McLaughlin Group Hotel China,http://dummyimage.com/908x879.png/5fa2dd/ffffff,1,China,,Mallory,,6312
+36,8,Lang-Wolff Hotel China,http://dummyimage.com/1165x709.png/dddddd/000000,1,China,,Bay,,80327
+37,1,"Osinski, Willms and Roberts Hotel Philippines",http://dummyimage.com/1375x864.png/dddddd/000000,1,Philippines,,Ramsey,2810,776
+38,5,"Cole, Roob and Carter Hotel Brazil",http://dummyimage.com/1005x609.png/dddddd/000000,1,Brazil,,Erie,36900-000,1440
+39,10,McLaughlin Group Hotel Portugal,http://dummyimage.com/1304x740.png/ff4444/ffffff,1,Portugal,Porto,Dawn,4640-221,5
+40,3,"Bruen, Smith and Morar Hotel Reunion",http://dummyimage.com/1385x719.png/5fa2dd/ffffff,1,Reunion,Réunion,Esch,97824 CEDEX,7002
+41,7,"Weber, Moen and Nitzsche Hotel China",http://dummyimage.com/1237x799.png/dddddd/000000,1,China,,Rieder,,5
+42,4,"Schowalter, Lueilwitz and Strosin Hotel Vietnam",,1,Vietnam,,Logan,,87
+43,1,"Osinski, Willms and Roberts Hotel China",http://dummyimage.com/1167x759.png/5fa2dd/ffffff,1,China,,Glacier Hill,,7
+44,8,Lang-Wolff Hotel Nepal,http://dummyimage.com/879x829.png/ff4444/ffffff,1,Nepal,,Prairie Rose,,114
+45,9,McCullough and Sons Hotel Russia,http://dummyimage.com/1211x871.png/ff4444/ffffff,1,Russia,,Union,140093,01753
+46,6,Kessler and Sons Hotel Poland,http://dummyimage.com/1075x745.png/dddddd/000000,1,Poland,,Dawn,28-363,2
+47,2,"Emard, Gleason and Shields Hotel Ukraine",http://dummyimage.com/1159x817.png/ff4444/ffffff,1,Ukraine,,Briar Crest,,42090
+48,5,"Cole, Roob and Carter Hotel Belarus",http://dummyimage.com/1149x689.png/ff4444/ffffff,1,Belarus,,Coolidge,,22635
+49,4,"Schowalter, Lueilwitz and Strosin Hotel Czech Republic",http://dummyimage.com/1040x637.png/5fa2dd/ffffff,1,Czech Republic,,Magdeline,664 62,679
+50,2,"Emard, Gleason and Shields Hotel Morocco",http://dummyimage.com/1156x801.png/ff4444/ffffff,1,Morocco,,Kipling,,35545

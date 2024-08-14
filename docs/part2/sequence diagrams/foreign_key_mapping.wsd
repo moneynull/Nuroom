@@ -1,0 +1,32 @@
+@startuml
+actor       Hotelier                as Foo0
+participant Frontend                as Foo1
+control     bookingControl          as Foo2
+entity      BookingService          as Foo3
+entity      BookingMapper           as Foo4
+entity      HotelMapper             as Foo5
+database    PostgreSQL                as Foo7
+entity      "a Booking"             as Foo10
+entity      "a BookingRoom"         as Foo8
+entity      "a Hotel"               as Foo11
+
+Foo0 -> Foo1 : List Bookings 
+Foo1 -> Foo2 : HTTP GET /ViewBookings
+Foo2 -> Foo3 : viewBookings(User)
+Foo3 -> Foo4 : findByHotelier(hotrelierId)
+Foo4 -> Foo7 : "SELECT * from tb_booking WHERE ... INNER JOIN ... "
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo10: new (Bookings)
+Foo4 -> Foo7 : "SELECT * from tb_booking_room WHERE ... JOIN ... "
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo8: new (BookingRooms)
+Foo4 -> Foo7 : "SELECT * from tb_hotel WHERE id IN (...)"
+Foo4 <-- Foo7 : Result set
+Foo4 -> Foo5: hotelFromQueryResult(rs)
+Foo5 -> Foo11: new (Hotel)
+Foo4 <- Foo5: List Hotels
+Foo3 <- Foo4: List of Bookings
+Foo2 <- Foo3: List of Bookings
+Foo1 <- Foo2 : HTTP RESPONSE [200]
+Foo0 <- Foo1 : View Booking
+@enduml

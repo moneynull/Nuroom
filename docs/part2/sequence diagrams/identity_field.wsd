@@ -1,0 +1,43 @@
+@startuml
+actor       Customer            as Foo0
+participant Frontend            as Foo1
+control     HotelControl        as Foo2
+entity      HotelService        as Foo3
+entity      HotelMapper         as Foo4
+entity      HotelAmenityMapper  as Foo6
+entity      RoomMapper          as Foo5
+entity      RoomAmenityMapper   as Foo7
+database    PostgreSQL            as Foo8
+entity      "a Hotel"           as Foo10
+entity      "a HotelAmenity"    as Foo11
+entity      "a Room"            as Foo9
+entity      "a RoomAmenity"    as Foo12
+
+Foo0 -> Foo1 : Search for stays 
+Foo1 -> Foo2 : HTTP GET /SearchAccommodation
+Foo2 -> Foo3 : searchValidRoom(searchData)
+Foo3 -> Foo4 : findByAvailability(searchData)
+Foo4 -> Foo4 : findAllHotels()
+Foo4 -> Foo8 : "SELECT ... FROM tb_hotel JOIN tb_hotelier_group ..."
+Foo4 -> Foo10 : new (Hotels)
+Foo4 -> Foo6 : addHotelAmenitiesToHotelList(hotelList)
+Foo6 -> Foo8 : "SELECT * FROM tb_hotel_amenity WHERE ..."
+Foo6 -> Foo11 : new (hotelAmenities)
+Foo6 -> Foo10 : new (hotels)
+Foo4 <- Foo6 : List of Hotels
+Foo4 -> Foo5 : findByAvailability(searchData)
+Foo5 -> Foo8 : "SELECT * FROM tb_room LEFT JOIN ... INNER JOIN WHERE ..."
+Foo5 -> Foo10 : new (rooms)
+Foo4 <- Foo5 : List of Rooms
+Foo4 -> Foo7 : addRoomAmenitiesToRoomList(roomList)
+Foo7 -> Foo8 : "SELECT * FROM tb_room_amenity WHERE ..."
+Foo7 -> Foo12 : new (roomAmenities)
+Foo7 -> Foo9 : new (rooms)
+Foo4 <- Foo7 : List of Rooms
+Foo4 -> Foo9 : new (rooms)
+Foo4 -> Foo10 : new (hotels)
+Foo3 <- Foo4 : List of hotels
+Foo2 <- Foo3: Result(List of hotels)
+Foo1 <- Foo2 : HTTP RESPONSE [200]
+Foo0 <- Foo1 : View stays
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+actor       Hotelier                as Foo0
+participant Frontend                as Foo1
+control     hotelControl            as Foo2
+entity      hotelService            as Foo3
+entity      hotelAmenityMapper      as Foo5
+entity      hotelMapper             as Foo8
+entity      "a HotelAmenity"        as Foo7
+entity      "a Hotel"               as Foo9
+database    PostreSQL               as Foo6
+entity      UnitOfWork              as Foo4
+
+Foo0 -> Foo1 : Update Hotel 
+Foo1 -> Foo2 : HTTP POST /ModifyHotel
+Foo2 -> Foo3 : modifyHotel(hotel,user)
+activate Foo4
+Foo3 -> Foo4 : registerDirty(hotel)
+Foo3 -> Foo5 : findByHotel(hotelId)
+Foo5 -> Foo6 : "SELECT * from tb_hotel_amenity WHERE ..."
+Foo5 <-- Foo6 : Result set
+Foo5 -> Foo7: new (HotelAmenities)
+Foo3 <- Foo5 : List of Hotel Amenities
+Foo3 -> Foo4 : registerDelete(hotelAmenity)
+Foo3 -> Foo9 : getHotelAmenityList()
+Foo3 <- Foo9 : List of Hotel Amenities
+Foo3 -> Foo4 : registerNew(hotelAmenities)
+Foo2 -> Foo4 : commit()
+Foo4 -> Foo8 : update()
+Foo8 -> Foo6 : "UPDATE tb_hotel SET ... "
+Foo1 <- Foo2 : HTTP RESPONSE [200]
+destroy Foo4
+Foo0 <- Foo1 : View Updated Hotel
+@enduml
